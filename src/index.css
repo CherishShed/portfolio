@@ -21,7 +21,7 @@
 }
 body {
   overflow-x: hidden;
-  background-image: url("back2.png");
+  background-image: url("./assets/back2.png");
   background-repeat: no-repeat;
   background-size: cover;
   @apply !bg-fixed;
@@ -84,7 +84,7 @@ body {
 }
 
 .head-shot {
-  background-image: url("portfolioheadshot.png");
+  background-image: url("./assets/portfolioheadshot.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
