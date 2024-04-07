@@ -1,0 +1,111 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"); */
+/* @import url("https://fonts.cdnfonts.com/css/family-2"); */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ojuju:wght@200..800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&display=swap"); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .family {
+  font-family: "Family", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+} */
+* {
+  font-family: "Nunito", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  background-image: url("back2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @apply !bg-fixed;
+}
+.overlay {
+  @apply !min-h-screen;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.main-background .overlay {
+  @apply h-screen w-screen absolute top-0;
+  z-index: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(144, 142, 142, 0) 100%
+  );
+}
+
+.active {
+  color: white !important;
+}
+.active::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 2px; /* Border height */
+  background-color: rgb(249 115 22); /* Adjust border color as needed */
+  transition: width 0.3s ease-in-out; /* Transition effect for width change */
+}
+
+.active::after {
+  width: 70% !important; /* Make border width 100% on hover */
+}
+
+.border-grow {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(187, 181, 181);
+  transition: all 0.3s; /* Remove default underline */
+}
+.border-grow:hover {
+  color: white;
+}
+.border-grow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Border height */
+  background-color: rgb(249 115 22); /* Adjust border color as needed */
+  transition: width 0.3s ease-in-out; /* Transition effect for width change */
+}
+
+.border-grow:hover::after {
+  width: 70%; /* Make border width 100% on hover */
+}
+
+.head-shot {
+  background-image: url("portfolioheadshot.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+*::-webkit-scrollbar {
+  background-color: rgb(67, 29, 2);
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: white;
+  width: 8px;
+}
+
+.ant-timeline-item-head {
+  background-color: transparent !important;
+}
+.ant-timeline-item-tail {
+  background-color: beige !important;
+}
+.MuiSvgIcon-root:hover {
+  color: orange;
+  transition: all 0.3s;
+}
