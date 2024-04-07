@@ -33,10 +33,10 @@ function Home() {
     <div className="main-background !overflow-hidden">
       <title>Cherish Shed</title>
       <Transition timeline={home} />
-      <div className="overlay"></div>
-      <div className="min-h-full min-w-full !overflow-hidden">
+      <div className="overlay !overflow-hidden"></div>
+      <div className=" absolute top-[30%] left-36 !overflow-hidden">
         <div
-          className="absolute top-[30%] h-full left-36 text-white flex flex-col gap-3  !overflow-hidden"
+          className=" text-white flex flex-col gap-3  !overflow-hidden"
           ref={homeh1}
         >
           <p className="text-6xl font-bold">cherish shed</p>

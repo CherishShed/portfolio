@@ -21,6 +21,7 @@
 }
 body {
   overflow-x: hidden;
+  background-color: black !important;
   background-image: url("./assets/back2.png");
   background-repeat: no-repeat;
   background-size: cover;
