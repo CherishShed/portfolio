@@ -199,8 +199,14 @@ function Resume() {
           ref={resumesection}
         >
           <div className="flex gap-2 items-center" ref={resumeMainHeader}>
-            <p className="text-3xl font-bold mb-3">check out my resume</p>
-            <hr className="w-[150px] border-[rgb(249,115,22)] border-2 " />
+            <p className="text-3xl font-bold mb-3 flex items-center">
+              <span className="text-7xl font-thin">{"{"}</span>
+              <span>
+                check out my{" "}
+                <span className="border-b-4 border-amber-600">resume</span>
+              </span>
+              <span className="text-7xl font-thin">{"}"}</span>
+            </p>
           </div>
           <div className="flex gap-3 items-center !leading-loose text-lg">
             <div className="flex gap-3 items-center !leading-loose text-lg">

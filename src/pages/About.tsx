@@ -22,11 +22,10 @@ function About() {
       aboutimg.current,
       {
         duration: 0.5,
-        skewY: -100,
-        x: -100,
+        scale: 0.7,
         opacity: 0,
       },
-      "-=3"
+      "-=1"
     );
   });
   return (
@@ -35,11 +34,17 @@ function About() {
       <div className="overlay p-10">
         <section className="w-[70%] mx-auto bg-[rgba(61,56,42,0.9)] p-4 text-white">
           <div className="flex gap-2 items-center !w-[80%]" ref={aboutsection}>
-            <p className="text-3xl font-bold mb-3">learn about me</p>
-            <hr className="w-[150px] border-[rgb(249,115,22)] border-2 " />
+            <p className="text-3xl font-bold mb-3 flex items-center">
+              <span className="text-7xl font-thin">{"{"}</span>
+              <span>
+                learn about{" "}
+                <span className="border-b-4 border-amber-600">me</span>
+              </span>
+              <span className="text-7xl font-thin">{"}"}</span>
+            </p>
           </div>
 
-          <div className="w-[80%] mx-auto">
+          <div className="w-[80%] mx-auto" ref={aboutimg}>
             <p className="text-justify leading-loose text-lg">
               hi there i'm cherish, a graduate of software engineering from
               babcock university. i have high passion for building software
