@@ -1,8 +1,8 @@
-import { Mail } from "@mui/icons-material";
+import { ArrowDownward } from "@mui/icons-material";
 // import Transition from "./Transition";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
-
+import Marqueee from "react-fast-marquee";
 function About() {
   const about = gsap.timeline();
   const aboutsection = useRef(null);
@@ -38,7 +38,7 @@ function About() {
               <span className="text-7xl font-thin">{"{"}</span>
               <span>
                 learn about{" "}
-                <span className="border-b-4 border-amber-600">me</span>
+                <span className="border-b-2 border-amber-600">me</span>
               </span>
               <span className="text-7xl font-thin">{"}"}</span>
             </p>
@@ -71,17 +71,28 @@ function About() {
               <br />- i really love the colour beige expecially when it's
               combined with brown (should be pretty obvious)
               <br />
-              overall, i'm a regular person who just enjoys coding and building.
-              if you think you'll like to have me as part of your project then
-              by all means hit the button{" "}
-              <a
-                href="mailto:c.shed2000@gmail.com"
-                className="text-[rgb(224,188,164)] hover:text-[rgb(249,115,22)] transition-all"
-              >
-                <Mail fontSize="large" />
-              </a>
+              overall, i'm a regular person who just enjoys coding. if you think
+              you'll like to have me as part of your project then by all means
+              hit the link{" "}
+              <ArrowDownward
+                fontSize="large"
+                className="text-[rgb(224,188,164)] transition-all"
+              />
             </p>
           </div>
+          <a href="mailto:c.shed2000@gmail.com">
+            <Marqueee
+              pauseOnHover
+              speed={150}
+              className="overflow-hidden flex items-center"
+            >
+              <p className="inline-block  text-8xl/tight md:text-9xl/tight font-extrabold -tracking-wide text-[rgb(224,188,164)] hover:text-[rgb(249,115,22)] transition-colors duration-300 lowercase">
+                {" "}
+                — LET’S TALK — LET’S COLLABORATE — SAY HELLO — DO YOU NEED HELP?
+                — DO YOU JUST WANT TO TALK ABOUT TECHONOLOGY
+              </p>
+            </Marqueee>
+          </a>
         </section>
       </div>
     </div>

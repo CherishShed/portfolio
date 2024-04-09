@@ -26,6 +26,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   @apply !bg-fixed;
+  text-transform: lowercase;
 }
 .overlay {
   @apply !min-h-screen;
@@ -109,4 +110,12 @@ body {
 .MuiSvgIcon-root:hover {
   color: orange;
   transition: all 0.3s;
+}
+
+.chip {
+  @apply rounded-2xl bg-white text-black w-fit min-w-[70px] text-center max-w-[100px] p-1;
+}
+
+.project-card {
+  @apply min-w-[200px] w-1/4 rounded-md min-h-[350px] h-fit relative border bg-[rgb(255,255,255,0.08)];
 }

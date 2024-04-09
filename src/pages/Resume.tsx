@@ -15,6 +15,7 @@ import {
 import MyTimeline from "../components/Timeline";
 import { TimelineItemProps } from "antd";
 import { TeamOutlined } from "@ant-design/icons";
+import ProjectCard from "../components/ProjectCard";
 
 function Resume() {
   const resume = gsap.timeline();
@@ -100,6 +101,53 @@ function Resume() {
       children: <></>,
     },
   ];
+  const portfolio = gsap.timeline();
+  const portfolioSection = useRef(null);
+  const portfolioimg = useRef(null);
+  const projects = [
+    {
+      title: "keeper app",
+      info: "efficient notes app for storing short text and also grouping the notes in labels",
+      image: "../keeper.png",
+      tools: ["javascript", "mongodb", "nodejs", "reactjs"],
+      link: "https://keeper-nine-eta.vercel.app/login",
+    },
+    {
+      title: "medguard",
+      info: "web app that allows hospital personnel to assess vitals and medication records of patients. send SMS to patient and hospital in any emergency",
+      image: "../medguard.png",
+      tools: ["typescript", "mongodb", "nodejs", "reactjs", "tailwind css"],
+      link: "https://medguard-frontend.vercel.app/signin",
+    },
+    {
+      title: "aporvis",
+      info: "web app people to remotely apply for visa and get appointments with an admin section that allows the embassy to approved and assign dates to applicants",
+      image: "../aporvis.png",
+      tools: ["typescript", "mongodb", "nodejs"],
+      link: "https://aporvs-client.vercel.app/",
+    },
+  ];
+  useEffect(() => {
+    portfolio.from(
+      portfolioSection.current,
+      {
+        duration: 0.3,
+        y: 20,
+        opacity: 0,
+        delay: 0.5,
+      },
+      "-=0"
+    );
+    portfolio.from(
+      portfolioimg.current,
+      {
+        duration: 0.5,
+        scale: 0.7,
+        opacity: 0,
+      },
+      "-=1"
+    );
+  }, []);
   useEffect(() => {
     resume.from(
       resumesection.current,
@@ -195,7 +243,7 @@ function Resume() {
       <title>Cherish Shed | Resume</title>
       <div className="p-10 overlay">
         <section
-          className="w-[80%] mx-auto bg-[rgba(61,56,42,0.9)] p-4  text-white"
+          className="w-[80%] mx-auto bg-[rgba(61,56,42,0.9)] p-4  text-white flex flex-col gap-4"
           ref={resumesection}
         >
           <div className="flex gap-2 items-center" ref={resumeMainHeader}>
@@ -203,7 +251,7 @@ function Resume() {
               <span className="text-7xl font-thin">{"{"}</span>
               <span>
                 check out my{" "}
-                <span className="border-b-4 border-amber-600">resume</span>
+                <span className="border-b-2 border-amber-600">resume</span>
               </span>
               <span className="text-7xl font-thin">{"}"}</span>
             </p>
@@ -276,6 +324,7 @@ function Resume() {
               </div>
             </div>
           </div>
+          <hr className="border-[rgba(253,186,109,0.62)] w-4/5 mx-auto" />
           <div className="flex justify-between mx-auto w-[90%]">
             <div ref={resumeeducations}>
               <h2 className="font-bold text-4xl mb-4 text-gray-200">
@@ -290,10 +339,16 @@ function Resume() {
               <MyTimeline items={experienceItems} />
             </div>
           </div>
+          <hr className="border-[rgba(253,186,109,0.62)] w-4/5 mx-auto" />
           <div className="skills flex flex-col gap-4 mb-4">
             <div className="flex gap-2 items-center " ref={resumeheader}>
-              <p className="text-xl font-bold mb-3 text-gray-300">skills</p>
-              <hr className="w-[150px] border-[rgb(249,115,22)] border-2 self-center" />
+              <p className="text-xl font-bold mb-3 flex gap-2 items-center italic">
+                <span className="text-4xl font-thin">{"{"}</span>
+                <span>
+                  <span className="border-b-2 border-amber-600">skills</span>
+                </span>
+                <span className="text-4xl font-thin">{"}"}</span>
+              </p>
             </div>
 
             <div className="flex gap-6 flex-wrap" ref={resumeSkills}>
@@ -344,13 +399,16 @@ function Resume() {
               </div>
             </div>
           </div>
+          <hr className="border-[rgba(253,186,109,0.62)] w-4/5 mx-auto" />
           <div className="tools flex flex-col gap-4">
-            <div
-              className="flex gap-2 items-center align-middle"
-              ref={resumeheader}
-            >
-              <p className="text-xl font-bold mb-3 text-gray-300">tools</p>
-              <hr className="w-[150px] border-[rgb(249,115,22)] border-2 self-center" />
+            <div className="flex gap-2 items-center" ref={resumeheader}>
+              <p className="text-xl font-bold mb-3 flex gap-2 items-center italic">
+                <span className="text-4xl font-thin">{"{"}</span>
+                <span>
+                  <span className="border-b-2 border-amber-600">tools</span>
+                </span>
+                <span className="text-4xl font-thin">{"}"}</span>
+              </p>
             </div>
             <div
               className="flex gap-4 items-center flex-wrap"
@@ -438,6 +496,7 @@ function Resume() {
               </div>
             </div>
           </div>
+          <hr className="border-[rgba(253,186,109,0.62)] w-4/5 mx-auto" />
           <div className="w-full p-4">
             <img
               src="http://ghchart.rshah.org/CherishShed"
@@ -445,6 +504,31 @@ function Resume() {
               alt="commit graph"
             />
           </div>
+          <hr className="border-[rgba(253,186,109,0.62)] w-4/5 mx-auto" />
+          <div
+            className="flex gap-2 items-center !w-[80%]"
+            ref={portfolioSection}
+          >
+            <p className="text-xl font-bold mb-3 flex gap-2 items-center italic">
+              <span className="text-4xl font-thin">{"{"}</span>
+              <span>
+                my <span className="border-b-2 border-amber-600">works</span>
+              </span>
+              <span className="text-4xl font-thin">{"}"}</span>
+            </p>
+          </div>
+          <div className="flex gap-5 justify-between">
+            {projects.map(({ image, info, title, tools, link }) => (
+              <ProjectCard
+                image={image}
+                info={info}
+                title={title}
+                tools={tools}
+                link={link}
+              />
+            ))}
+          </div>
+          <hr className="border-[rgba(253,186,109,0.62)] w-4/5 mx-auto" />
         </section>
       </div>
     </div>
