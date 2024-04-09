@@ -6,7 +6,7 @@ interface MyTimelineProps {
 }
 
 const MyTimeline: React.FC<MyTimelineProps> = ({ items }) => (
-  <Timeline items={items} className="w-[80%]" />
+  <Timeline items={items} className="md:w-[80%]" />
 );
 
 export default MyTimeline;

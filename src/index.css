@@ -117,5 +117,5 @@ body {
 }
 
 .project-card {
-  @apply min-w-[200px] w-1/4 rounded-md min-h-[350px] h-fit relative border bg-[rgb(255,255,255,0.08)];
+  @apply min-w-[80%] md:min-w-[200px] w-1/4 rounded-md min-h-[350px] h-fit relative border bg-[rgb(255,255,255,0.08)];
 }

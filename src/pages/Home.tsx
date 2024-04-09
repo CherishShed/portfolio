@@ -62,13 +62,13 @@ function Home() {
   });
 
   return (
-    <div className={`main-background !overflow-hidden`}>
+    <div className={`md:main-background !overflow-hidden`}>
       <title>Cherish Shed</title>
       <Transition timeline={home} />
       <div className="overlay !overflow-hidden"></div>
-      <div className=" absolute top-[30%] left-36 !overflow-hidden">
+      <div className="left-3 absolute top-[30%] md:left-36 !overflow-hidden">
         <div
-          className=" text-white flex flex-col gap-3  !overflow-hidden"
+          className=" text-white flex flex-col gap-3 !overflow-hidden"
           ref={homeh1}
         >
           <p className="text-6xl font-bold relative">
@@ -99,12 +99,6 @@ function Home() {
             </NavLink>
             <NavLink to="/me/resume" className="border-grow">
               resume
-            </NavLink>
-            <NavLink to="/me/portfolio" className="border-grow">
-              portfolio
-            </NavLink>
-            <NavLink to="/me/contact" className="border-grow">
-              contact
             </NavLink>
           </nav>
 

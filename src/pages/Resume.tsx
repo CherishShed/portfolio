@@ -241,39 +241,42 @@ function Resume() {
   return (
     <div className="!overflow-hidden">
       <title>Cherish Shed | Resume</title>
-      <div className="p-10 overlay">
+      <div className="p-2 md:p-10 overlay">
         <section
-          className="w-[80%] mx-auto bg-[rgba(61,56,42,0.9)] p-4  text-white flex flex-col gap-4"
+          className="p-2 w-full md:w-[80%] mx-auto bg-[rgba(61,56,42,0.9)] md:p-4 text-white flex flex-col gap-4"
           ref={resumesection}
         >
-          <div className="flex gap-2 items-center" ref={resumeMainHeader}>
-            <p className="text-3xl font-bold mb-3 flex items-center">
-              <span className="text-7xl font-thin">{"{"}</span>
+          <div
+            className="flex gap-2 items-center flex-wrap"
+            ref={resumeMainHeader}
+          >
+            <p className="text-base md:text-3xl font-bold mb-3 flex items-center">
+              <span className="text-2xl md:text-7xl font-thin">{"{"}</span>
               <span>
                 check out my{" "}
                 <span className="border-b-2 border-amber-600">resume</span>
               </span>
-              <span className="text-7xl font-thin">{"}"}</span>
+              <span className="text-2xl md:text-7xl font-thin">{"}"}</span>
             </p>
           </div>
-          <div className="flex gap-3 items-center !leading-loose text-lg">
-            <div className="flex gap-3 items-center !leading-loose text-lg">
+          <div className="flex flex-wrap gap-3 items-center !leading-loose text-lg">
+            <div className="flex flex-wrap gap-3 items-center !leading-loose text-lg">
               <div
-                className="head-shot w-[300px] h-[300px] rounded-full"
+                className="head-shot w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full"
                 ref={resumeimg}
               ></div>
               <div
-                className="h-[400px] w-[70%] flex flex-col gap-2"
+                className="w-full md:h-[400px] md:w-[70%] flex flex-wrap flex-col gap-2"
                 ref={resumeDets}
               >
-                <p className="text-3xl text-[rgb(249,115,22)] font-semibold">
+                <p className="text-2xl md:text-3xl text-[rgb(249,115,22)] font-semibold">
                   software engineer/developer
                 </p>
-                <p>
+                <p className="text-base">
                   full stack engineer dedicated to building products tailored to
                   people's needs
                 </p>
-                <div className="text-white flex gap-4">
+                <div className="text-white flex gap-4 flex-wrap">
                   <a href="https://github.com/CherishShed">
                     <GitHub />
                   </a>
@@ -284,8 +287,8 @@ function Resume() {
                     <X />
                   </a>
                 </div>
-                <div className="flex gap-10">
-                  <div className="flex flex-col gap-3">
+                <div className="flex gap-2 md:gap-10 flex-wrap">
+                  <div className="flex flex-col gap-3 flex-wrap">
                     <p>
                       <ChevronRight className="text-[rgb(249,115,22)]" />
                       <span className="font-bold">degree:</span> bachelors
@@ -293,17 +296,25 @@ function Resume() {
                     <p>
                       <ChevronRight className="text-[rgb(249,115,22)]" />
                       <span className="font-bold">email:</span>{" "}
-                      <a href="mailto:c.shed2000@gmail.com">
+                      <a
+                        href="mailto:c.shed2000@gmail.com"
+                        className="hover:text-amber-400 transition-colors"
+                      >
                         c.shed2000@gmail.com
                       </a>
                     </p>
                     <p>
                       <ChevronRight className="text-[rgb(249,115,22)]" />
                       <span className="font-bold">telephone:</span>{" "}
-                      <a href="tel:+2349029465346">+2349029465346</a>
+                      <a
+                        href="tel:+2349029465346"
+                        className="hover:text-amber-400 transition-colors"
+                      >
+                        +2349029465346
+                      </a>
                     </p>
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col flex-wrap gap-3">
                     <p>
                       <ChevronRight className="text-[rgb(249,115,22)]" />
                       <span className="font-bold">location: </span>Lagos,
@@ -315,7 +326,7 @@ function Resume() {
                     </p>
                   </div>
                 </div>
-                <p className="text">
+                <p className="text-base">
                   as a committed full-stack engineer, i am driven by a passion
                   for developing technology that enhances people's lives. i
                   consistently find motivation in the chance to innovate,
@@ -325,14 +336,15 @@ function Resume() {
             </div>
           </div>
           <hr className="border-[rgba(253,186,109,0.62)] w-4/5 mx-auto" />
-          <div className="flex justify-between mx-auto w-[90%]">
-            <div ref={resumeeducations}>
+          <div className="flex justify-between mx-auto w-[90%] flex-wrap">
+            <div ref={resumeeducations} className="md:w-1/2">
               <h2 className="font-bold text-4xl mb-4 text-gray-200">
                 education
               </h2>
               <MyTimeline items={educationItems} />
             </div>
-            <div ref={resumeexperience}>
+
+            <div ref={resumeexperience} className="md:w-1/2">
               <h2 className="font-bold text-4xl mb-4 text-gray-200">
                 professional experience
               </h2>
@@ -340,7 +352,7 @@ function Resume() {
             </div>
           </div>
           <hr className="border-[rgba(253,186,109,0.62)] w-4/5 mx-auto" />
-          <div className="skills flex flex-col gap-4 mb-4">
+          <div className="skills flex flex-wrap flex-col gap-1 md:gap-4 mb-4">
             <div className="flex gap-2 items-center " ref={resumeheader}>
               <p className="text-xl font-bold mb-3 flex gap-2 items-center italic">
                 <span className="text-4xl font-thin">{"{"}</span>
@@ -351,8 +363,11 @@ function Resume() {
               </p>
             </div>
 
-            <div className="flex gap-6 flex-wrap" ref={resumeSkills}>
-              <div className="transition-all relative w-[200px] h-[100px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)]">
+            <div
+              className="flex gap-6 flex-wrap justify-center md:justify-normal"
+              ref={resumeSkills}
+            >
+              <div className="transition-all relative w-[150px] h-[100px] md:w-[200px] md:h-[100px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)]">
                 <Laptop
                   className="absolute -top-5 left-1/2 -translate-x-1/2"
                   fontSize="large"
@@ -361,7 +376,7 @@ function Resume() {
                   full Stack development
                 </p>
               </div>
-              <div className="transition-all relative w-[200px] h-[100px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)]">
+              <div className="transition-all relative w-[150px] h-[100px] md:w-[200px] md:h-[100px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)]">
                 <Article
                   className="absolute -top-5 left-1/2 -translate-x-1/2"
                   fontSize="large"
@@ -370,7 +385,7 @@ function Resume() {
                   software documentation
                 </p>
               </div>
-              <div className="transition-all relative w-[200px] h-[100px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)]">
+              <div className="transition-all relative w-[150px] h-[100px] md:w-[200px] md:h-[100px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)]">
                 <Quiz
                   className="absolute -top-5 left-1/2 -translate-x-1/2"
                   fontSize="large"
@@ -379,7 +394,7 @@ function Resume() {
                   software testing
                 </p>
               </div>
-              <div className="transition-all relative w-[200px] h-[100px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)]">
+              <div className="transition-all relative w-[150px] h-[100px] md:w-[200px] md:h-[100px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)]">
                 <TeamOutlined
                   className="absolute -top-5 left-1/2 -translate-x-1/2 text-4xl"
                   sizes="large"
@@ -388,7 +403,7 @@ function Resume() {
                   team collaboration
                 </p>
               </div>
-              <div className="transition-all relative w-[200px] h-[100px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)]">
+              <div className="transition-all relative w-[150px] h-[100px] md:w-[200px] md:h-[100px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)]">
                 <DataObject
                   className="absolute -top-5 left-1/2 -translate-x-1/2"
                   fontSize="large"
@@ -414,7 +429,7 @@ function Resume() {
               className="flex gap-4 items-center flex-wrap"
               ref={resumeTools}
             >
-              <div className="transition-all relative min-w-[200px] w-fit min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
+              <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/1126/1126012.png"
                   alt="me"
@@ -422,7 +437,7 @@ function Resume() {
                 />
                 <p className="w-full relative text-left">ReactJS</p>
               </div>
-              <div className="transition-all relative min-w-[200px] w-fit min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
+              <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/5968/5968381.png"
                   alt="me"
@@ -430,7 +445,7 @@ function Resume() {
                 />
                 <p className="w-full relative text-left">typescript</p>
               </div>
-              <div className="transition-all relative min-w-[200px] w-fit min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
+              <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/5968/5968342.png"
                   alt="me"
@@ -438,7 +453,7 @@ function Resume() {
                 />
                 <p className="w-full relative text-left">postgreSQL</p>
               </div>
-              <div className="transition-all relative min-w-[200px] w-fit min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
+              <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfDSJ7bq__Gl9aiCju897Jl6JPt61mV2flGpx2Ye2tqg&s"
                   alt="me"
@@ -446,7 +461,7 @@ function Resume() {
                 />
                 <p className="w-full relative text-left">prisma</p>
               </div>
-              <div className="transition-all relative min-w-[200px] w-fit min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
+              <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjCjMfhG8ETwgXQMgUE8fjQi_e5TFOkEFP_APpQXUPWA&s"
                   alt="me"
@@ -454,7 +469,7 @@ function Resume() {
                 />
                 <p className="w-full relative text-left">mongoDB</p>
               </div>
-              <div className="transition-all relative min-w-[200px] w-fit min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
+              <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsTa6eTkICtTadK1Jceb5FWANCvhbwYyXFLjkE5RP4YA&s"
                   alt="me"
@@ -462,7 +477,7 @@ function Resume() {
                 />
                 <p className="w-full relative text-left">expressJS</p>
               </div>
-              <div className="transition-all relative min-w-[200px] w-fit min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
+              <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_bMQt9M5mLRYeQF6JMZyzEEzpM0bjeWWGFelI8Rrpcw&s"
                   alt="me"
@@ -470,7 +485,7 @@ function Resume() {
                 />
                 <p className="w-full relative text-left">tailwind CSS</p>
               </div>
-              <div className="transition-all relative min-w-[200px] w-fit min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
+              <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQP_3ynAZYQkyJeCFcUpNVJXNf2kVms7SjmKeg4cBy4Q&s"
                   alt="me"
@@ -478,7 +493,7 @@ function Resume() {
                 />
                 <p className="w-full relative text-left">redux</p>
               </div>
-              <div className="transition-all relative min-w-[200px] w-fit min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
+              <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
                 <img
                   src="https://jobkaehenry.gallerycdn.vsassets.io/extensions/jobkaehenry/zustand-snippet/1.0.1/1682180336770/Microsoft.VisualStudio.Services.Icons.Default"
                   alt="me"
@@ -486,7 +501,7 @@ function Resume() {
                 />
                 <p className="w-full relative text-left">zustand</p>
               </div>
-              <div className="transition-all relative min-w-[200px] w-fit min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
+              <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/919/919853.png"
                   alt="me"
@@ -497,7 +512,7 @@ function Resume() {
             </div>
           </div>
           <hr className="border-[rgba(253,186,109,0.62)] w-4/5 mx-auto" />
-          <div className="w-full p-4">
+          <div className="w-full p-4]">
             <img
               src="http://ghchart.rshah.org/CherishShed"
               className="w-full"
@@ -517,7 +532,7 @@ function Resume() {
               <span className="text-4xl font-thin">{"}"}</span>
             </p>
           </div>
-          <div className="flex gap-5 justify-between">
+          <div className="flex gap-5 justify-center md:justify-between flex-wrap">
             {projects.map(({ image, info, title, tools, link }) => (
               <ProjectCard
                 image={image}

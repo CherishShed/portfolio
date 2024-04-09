@@ -33,7 +33,7 @@ function Nav() {
     <>
       <Transition timeline={nav} />
       <nav
-        className={`flex justify-between px-[150px] py-5 items-center bg-[rgba(11,7,5)] text-gray-300 backdrop-blur-lg w-full relative z-50`}
+        className={`flex justify-between px-[20px] md:px-[150px] py-5 items-center bg-[rgba(11,7,5)] text-gray-300 backdrop-blur-lg w-full relative z-50`}
       >
         <Link
           to={"/"}
@@ -54,12 +54,6 @@ function Nav() {
           </NavLink>
           <NavLink to="/me/resume" className="border-grow">
             resume
-          </NavLink>
-          <NavLink to="/me/portfolio" className="border-grow">
-            portfolio
-          </NavLink>
-          <NavLink to="/me/contact" className="border-grow">
-            contact
           </NavLink>
         </nav>
       </nav>
