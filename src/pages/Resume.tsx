@@ -287,7 +287,7 @@ function Resume() {
                     <X />
                   </a>
                 </div>
-                <div className="flex gap-2 md:gap-10 flex-wrap">
+                <div className="flex gap-2 md:gap-10 flex-wrap text-base md:text-lg">
                   <div className="flex flex-col gap-3 flex-wrap">
                     <p>
                       <ChevronRight className="text-[rgb(249,115,22)]" />
@@ -326,7 +326,7 @@ function Resume() {
                     </p>
                   </div>
                 </div>
-                <p className="text-base text-justify">
+                <p className="text-base md:text-lg text-justify">
                   as a committed full-stack engineer, i am driven by a passion
                   for developing technology that enhances people's lives. i
                   consistently find motivation in the chance to innovate,
