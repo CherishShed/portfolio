@@ -262,7 +262,7 @@ function Resume() {
           <div className="flex flex-wrap gap-3 items-center !leading-loose text-lg">
             <div className="flex flex-wrap gap-3 items-center !leading-loose text-lg">
               <div
-                className="head-shot w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full"
+                className="head-shot mx-auto w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full"
                 ref={resumeimg}
               ></div>
               <div
@@ -326,7 +326,7 @@ function Resume() {
                     </p>
                   </div>
                 </div>
-                <p className="text-base">
+                <p className="text-base text-justify">
                   as a committed full-stack engineer, i am driven by a passion
                   for developing technology that enhances people's lives. i
                   consistently find motivation in the chance to innovate,
