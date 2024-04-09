@@ -426,7 +426,7 @@ function Resume() {
               </p>
             </div>
             <div
-              className="flex gap-4 items-center flex-wrap"
+              className="flex gap-4 items-center flex-wrap justify-center md:justify-center"
               ref={resumeTools}
             >
               <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
