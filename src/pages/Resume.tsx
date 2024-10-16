@@ -35,10 +35,10 @@ function Resume() {
       children: (
         <>
           <p className="text-lg text-[rgb(206,150,111)] font-bold">
-            Bachelor of Software Engineering
+            BSc. Software Engineering
           </p>
           <p className="p-2 rounded-xl bg-[rgb(67,29,2)] text-white w-fit min-w-[100px] text-center">
-            2020-2024
+            September 2020- July 2024
           </p>
           <div className="text-white">
             <p className="italic text-lg font-bold text-[rgb(197,195,194)]">
@@ -69,8 +69,11 @@ function Resume() {
       color: "rgb(67, 29, 2)",
       children: (
         <>
-          <p className="text-lg text-[rgb(206,150,111)] font-bold">
-            Software Engineer Intern
+          <p className="text-lg text-[rgb(206,150,111)] font-bold space-x-2">
+            <span>Software Engineer Intern </span>
+            <span className="rounded-md bg-white text-black w-fit text-center max-w-[100px] px-1 text-xs">
+              hybrid
+            </span>
           </p>
           <p className="p-2 rounded-xl bg-[rgb(67,29,2)] text-white w-fit min-w-[100px] text-center">
             January 2023 - June 2023
@@ -81,14 +84,83 @@ function Resume() {
             </p>
             <ul className="text-justify !text-sm">
               <li>
-                Developed efficient APIs using backend technologies such as Node
-                JS, postgreSQL, mongoDB etc
+                • Developed efficient APIs using backend technologies such as
+                Node JS, postgreSQL, mongoDB etc
               </li>
-              <li>Engaged in requirements elicitation and documentation.</li>
-              <li> Documented system testing processes and results</li>
+              <li>• Engaged in requirements elicitation and documentation.</li>
+              <li>• Documented system testing processes and results</li>
               <li>
-                Collaborated with team members to deliver efficient systems to
+                • Collaborated with team members to deliver efficient systems to
                 clients
+              </li>
+            </ul>
+          </div>
+        </>
+      ),
+    },
+    {
+      dot: <Circle className="justify-center self-center" fontSize="medium" />,
+      color: "rgb(67, 29, 2)",
+      children: (
+        <>
+          <p className="text-lg text-[rgb(206,150,111)] font-bold space-x-2">
+            <span> Frontend Developer</span>
+            <span className="rounded-md bg-white text-black w-fit text-center max-w-[100px] px-1 text-xs">
+              remote
+            </span>
+          </p>
+          <p className="p-2 rounded-xl bg-[rgb(67,29,2)] text-white w-fit min-w-[100px] text-center">
+            May 2024 - Till Date
+          </p>
+          <div className="text-white">
+            <p className="italic text-lg font-semibold text-[rgb(218,216,215)]">
+              Tizela
+            </p>
+            <ul className="text-justify !text-sm">
+              <li>
+                • Collaborated effectively with cross-functional teams to
+                achieve project goals, fostering communication, and promoting
+                synergy among team members.
+              </li>
+
+              <li>
+                • Built robust and responsive web interfaces using React and
+                typesctipt
+              </li>
+              <li>• interpreted Ui design perfectly</li>
+              <li>• Managed version control for the frontend development</li>
+            </ul>
+          </div>
+        </>
+      ),
+    },
+    {
+      dot: <Circle className="justify-center self-center" fontSize="medium" />,
+      color: "rgb(67, 29, 2)",
+      children: (
+        <>
+          <p className="text-lg text-[rgb(206,150,111)] font-bold space-x-2">
+            <span>Software Engineer</span>
+            <span className="rounded-md bg-white text-black w-fit text-center max-w-[100px] px-1 text-xs">
+              remote
+            </span>
+          </p>
+          <p className="p-2 rounded-xl bg-[rgb(67,29,2)] text-white w-fit min-w-[100px] text-center">
+            October 2024 - Till Date
+          </p>
+          <div className="text-white">
+            <p className="italic text-lg font-semibold text-[rgb(218,216,215)]">
+              Your Study Path
+            </p>
+            <ul className="text-justify !text-sm">
+              <li>
+                • Worked with Next Js and typescript to build a responsive Web
+                interface
+              </li>
+
+              <li>
+                • Handled File reading and display on the website as well as
+                Video streaming services
               </li>
             </ul>
           </div>
@@ -125,6 +197,13 @@ function Resume() {
       image: "../aporvis.png",
       tools: ["typescript", "mongodb", "nodejs"],
       link: "https://aporvs-client.vercel.app/",
+    },
+    {
+      title: "buymezobo",
+      info: "with buymezobo we are trying to create an easy way for nigerian creators or even anyone with an audience to monetize their audience.",
+      image: "../bmz.png",
+      tools: ["typescript", "NextJs", "elysia"],
+      link: "https://buymezobo.vercel.app/",
     },
   ];
   useEffect(() => {
@@ -327,10 +406,8 @@ function Resume() {
                   </div>
                 </div>
                 <p className="text-base md:text-lg text-justify">
-                  as a committed full-stack engineer, i am driven by a passion
-                  for developing technology that enhances people's lives. i
-                  consistently find motivation in the chance to innovate,
-                  create, and offer valuable solutions.{" "}
+                  i love to work on technology that drives change. i light up at
+                  chance to innovate, create, and offer valuable solutions.{" "}
                 </p>
               </div>
             </div>
@@ -364,7 +441,7 @@ function Resume() {
             </div>
 
             <div
-              className="flex gap-6 flex-wrap justify-center md:justify-normal"
+              className="flex gap-3 flex-wrap justify-center md:justify-center"
               ref={resumeSkills}
             >
               <div className="transition-all relative w-[150px] h-[100px] md:w-[200px] md:h-[100px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)]">
@@ -426,7 +503,7 @@ function Resume() {
               </p>
             </div>
             <div
-              className="flex gap-4 items-center flex-wrap justify-center md:justify-center"
+              className="flex gap-3 items-center flex-wrap justify-center md:justify-center"
               ref={resumeTools}
             >
               <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
@@ -509,6 +586,38 @@ function Resume() {
                 />
                 <p className="w-full relative text-left">docker</p>
               </div>
+              <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlqZz3DFu9eQMbAThRSCjHwen-YIUKjZYm5A&s"
+                  alt="me"
+                  className="w-[40px] h-[40px]"
+                />
+                <p className="w-full relative text-left">bun js</p>
+              </div>
+              <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd5TWlD2BJ6dRXnkgzg6G-AVNe2u0vOuXypw&s"
+                  alt="me"
+                  className="w-[40px] h-[40px]"
+                />
+                <p className="w-full relative text-left">elysia</p>
+              </div>
+              <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
+                <img
+                  src="https://images.prismic.io/turing/652ec31afbd9a45bcec81965_Top_Features_in_Next_js_13_7f9a32190f.webp?auto=format,compress"
+                  alt="me"
+                  className="w-[40px] h-[40px]"
+                />
+                <p className="w-full relative text-left">next js</p>
+              </div>
+              <div className="transition-all relative w-[150px] h-[50px] md:h-[100px] md:min-w-[200px] md:w-fit md:min-h-[70px] text-center rounded-md bg-[rgb(255,255,255,0.08)] p-2 hover:bg-[rgb(255,255,255,0.2)] flex gap-2 items-center">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbqj9Ii13d6hx5a9kyLnC5A8A96LDSaSZv_w&s"
+                  alt="me"
+                  className="w-[40px] h-[40px]"
+                />
+                <p className="w-full relative text-left">git/github</p>
+              </div>
             </div>
           </div>
           <hr className="border-[rgba(253,186,109,0.62)] w-4/5 mx-auto" />
@@ -532,7 +641,7 @@ function Resume() {
               <span className="text-4xl font-thin">{"}"}</span>
             </p>
           </div>
-          <div className="flex gap-5 justify-center md:justify-between flex-wrap">
+          <div className="flex gap-6 md:gap-3 justify-center flex-wrap md:justify-evenly">
             {projects.map(({ image, info, title, tools, link }) => (
               <ProjectCard
                 image={image}

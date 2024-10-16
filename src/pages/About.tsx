@@ -53,13 +53,14 @@ function About() {
               (watch out, i'll soon update this profile with mobile development
               tools).
               <br />
-              when i'm not engrossed in codingor reading someone else's code,
-              i'll most likely be listening to a podcast or music. i'm really a
-              sucker for violin and saxophone covers even though i have no idea
-              how to play any of them. i plan to learn the piano though so
-              there's that.
+              when i'm not coding or reading someone else's code, i'll most
+              likely be listening to a podcast or music. i'm really a sucker for
+              violin and saxophone covers even though i have no idea how to play
+              any of them. i plan to learn the piano though so there's that.
               <br />
               i am particularly excited about:
+              <br /> - discussing about society and hearing people's views on
+              certain topics.
               <br /> - discussing about society and hearing people's views on
               certain topics.
               <br />
@@ -67,9 +68,16 @@ function About() {
               <br />
               - recommending music and getting recommendations
               <br />
+              - shigeki no kyojin. i genuinely believe it is the greatest work
+              of fiction ever produced...but that's just me
+              <br />
               - learning new words and their meanings
               <br />- i really love the colour beige expecially when it's
               combined with brown (should be pretty obvious)
+              <br /> - recently started reading novels, i've covered a few...
+              right now i am reading the poppy war series by R.F Kuang
+              <br />
+              <br />
               <br />
               overall, i'm a regular person who just enjoys coding. if you think
               you'll like to have me as part of your project then by all means

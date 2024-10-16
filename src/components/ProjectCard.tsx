@@ -59,7 +59,7 @@ function ProjectCard({
       }}
     >
       <div className="h-fit w-full">
-        <img src={image} alt="project" className="w-full h-fit" />
+        <img src={image} alt="project" className="w-full h-fit rounded-t-2xl" />
         <p className="relative p-2 text-sm text-amber-200 font-semibold italic">
           {title}
         </p>

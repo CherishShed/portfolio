@@ -84,7 +84,7 @@ function Home() {
             <span className="relative left-4">d</span>
           </p>
           <p className="text-2xl text-gray-300">
-            i'm a passionate{" "}
+            i'm a{" "}
             <span className="border-b-2 border-orange-500 text-white">
               {"{ software engineer }"}
             </span>{" "}
